@@ -1,4 +1,6 @@
 services:
+
+  # Kafka
   zookeeper:
     image: wurstmeister/zookeeper
     ports:
@@ -28,6 +30,14 @@ services:
 
   node-consumer:
     build: ./consumer
+    depends_on:
+      - kafka
+    networks:
+      - kafka-network
+
+  # Microservices
+  catalog:
+    build: ./microservices/catalog-service
     depends_on:
       - kafka
     networks:

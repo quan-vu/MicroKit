@@ -1,4 +1,4 @@
-
+# For project
 build:
 	docker compose build
 	
@@ -21,3 +21,7 @@ logs:
 
 clean:
 	docker compose down -v
+
+# For services
+start-service:
+	docker compose up -d catalog
