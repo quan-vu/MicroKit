@@ -1,0 +1,11 @@
+# Common
+dist/
+coverage/
+.env
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
